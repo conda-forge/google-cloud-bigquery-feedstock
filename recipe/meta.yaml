@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "0.24.0" %}
-{% set sha256 = "3455d9ba66c876a37ff73108a95771edce4e082537d6119c19dcc1371f1b086a" %}
+{% set version = "0.25.0" %}
+{% set sha256 = "6e8cc6914701bbfd8845cc0e0b19c5e2123649fc6ddc49aa945d83629499f4ec" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
 
   run:
     - python
-    - google-cloud-core >=0.24.0,<0.25dev
+    - google-cloud-core >=0.25.0,<0.26dev
 
 test:
   imports:
@@ -41,3 +41,4 @@ about:
 extra:
   recipe-maintainers:
     - parthea
+    - tswast
