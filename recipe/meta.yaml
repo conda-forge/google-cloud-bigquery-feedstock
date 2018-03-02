@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "0.29.0" %}
-{% set sha256 = "98d7f169cd4b64c8a5ff5cca9b0c6234997a3e4fca4be3e51e22e66ef2f1618a" %}
+{% set version = "0.31.0" %}
+{% set sha256 = "6374a68ef232ae93b6bc364e62c37c9e2bc1fffdd017ea10ffe6a65393f40acb" %}
 
 package:
   name: {{ name|lower }}
@@ -14,20 +14,19 @@ source:
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
     - setuptools
+    - pip
 
   run:
     - python
     - google-cloud-core >=0.28.0,<0.29dev
-    - google-api-core >=0.1.1,<0.2.0dev
-    - google-auth >=1.0.0
+    - google-api-core >=1.0.0,<2.0.0dev
     - google-resumable-media >=0.2.1
-    - requests >=2.18.0
 
 test:
   imports:
