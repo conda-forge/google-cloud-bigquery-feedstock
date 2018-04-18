@@ -14,12 +14,15 @@ Python idiomatic client for Google BigQuery
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/google-cloud-bigquery-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/google-cloud-bigquery-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/google-cloud-bigquery-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/google-cloud-bigquery-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/google-cloud-bigquery/badges/version.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/google-cloud-bigquery/badges/downloads.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
+[![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
 
 Installing google-cloud-bigquery
 ================================
