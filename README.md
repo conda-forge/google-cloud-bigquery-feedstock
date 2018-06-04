@@ -19,10 +19,10 @@ All platforms:
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) |
 
 Installing google-cloud-bigquery
 ================================
