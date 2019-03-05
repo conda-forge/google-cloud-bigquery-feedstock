@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -24,9 +24,9 @@ requirements:
 
   run:
     - python
-    - google-cloud-core >=0.28.0,<0.29dev
-    - google-api-core >=1.0.0,<2.0.0dev
-    - google-resumable-media >=0.2.1
+    - google-cloud-core >=0.29.0,<0.30dev
+    - google-api-core >=1.6.0,<2.0.0dev
+    - google-resumable-media >=0.3.1
 
 test:
   requires:
