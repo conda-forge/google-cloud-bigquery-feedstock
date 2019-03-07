@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.9.0" %}
-{% set sha256 = "169ffdb1b677f69f1f9d032bd38f724aed73e0565153ac17199472c083a3852f" %}
+{% set version = "1.10.0" %}
+{% set sha256 = "d4e350675dcc4e06fb8046fbaae7a6322721f76414c4c5d123fa8606a1578c9b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
