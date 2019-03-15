@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -29,9 +29,8 @@ requirements:
     - google-resumable-media >=0.3.1
 
 test:
-  requires:
-    - python 3.6  # work around temporary protobuf issues
   imports:
+    - google.api_core
     - google.cloud.bigquery
 
 about:
