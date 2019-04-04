@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.10.0" %}
-{% set sha256 = "d4e350675dcc4e06fb8046fbaae7a6322721f76414c4c5d123fa8606a1578c9b" %}
+{% set version = "1.11.1" %}
+{% set sha256 = "61978e15ec9067fcead664d1d1bc146abd3d77cf12b3576ffae17cf67fafc050" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  noarch: python
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -24,6 +23,8 @@ requirements:
 
   run:
     - python
+    # Backport of enum for Python < 3.4.
+    - enum34  # [py2k]
     - google-cloud-core >=0.29.0,<0.30dev
     - google-api-core >=1.6.0,<2.0.0dev
     - google-resumable-media >=0.3.1
