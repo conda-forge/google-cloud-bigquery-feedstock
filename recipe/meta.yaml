@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.11.1" %}
-{% set sha256 = "61978e15ec9067fcead664d1d1bc146abd3d77cf12b3576ffae17cf67fafc050" %}
+{% set version = "1.11.2" %}
+{% set sha256 = "43b0ac02a16a8ad72e8b2e2fa4005ff93bba38c102ffc78842bec1d664053e8b" %}
 
 package:
   name: {{ name|lower }}
@@ -28,6 +28,7 @@ requirements:
     - google-cloud-core >=0.29.0,<0.30dev
     - google-api-core >=1.6.0,<2.0.0dev
     - google-resumable-media >=0.3.1
+    - protobuf >=3.6.0
 
 test:
   imports:
