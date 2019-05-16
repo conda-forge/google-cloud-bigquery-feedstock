@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.11.2" %}
-{% set sha256 = "43b0ac02a16a8ad72e8b2e2fa4005ff93bba38c102ffc78842bec1d664053e8b" %}
+{% set version = "1.11.3" %}
+{% set sha256 = "820be5bd4abe41951df84efcfd0644dae8d96245d52c4c9009308894020d3199" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
     - python
     # Backport of enum for Python < 3.4.
     - enum34  # [py2k]
-    - google-cloud-core >=0.29.0,<0.30dev
+    - google-cloud-core >=0.29.0,<2.0.0dev
     - google-api-core >=1.6.0,<2.0.0dev
     - google-resumable-media >=0.3.1
     - protobuf >=3.6.0
