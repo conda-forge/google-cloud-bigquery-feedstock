@@ -34,6 +34,7 @@ test:
   imports:
     - google.api_core
     - google.cloud.bigquery
+    - google.cloud.bigquery_v2
 
 about:
   home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/bigquery
