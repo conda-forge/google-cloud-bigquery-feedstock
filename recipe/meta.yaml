@@ -25,7 +25,7 @@ requirements:
     - python
     # Backport of enum for Python < 3.4.
     - enum34  # [py2k]
-    - google-cloud-core >=0.29.0,<2.0.0dev
+    - google-cloud-core >=1.0.0,<2.0.0dev
     - google-api-core >=1.6.0,<2.0.0dev
     - google-resumable-media >=0.3.1
     - protobuf >=3.6.0
