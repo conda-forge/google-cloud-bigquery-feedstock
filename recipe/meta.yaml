@@ -39,6 +39,7 @@ outputs:
 
       run:
         - {{ name }}-core {{ version }}
+        - python
         - google-cloud-bigquery-storage >=0.6.0,<0.8.0dev
         - ipython >=5.0.0
         - pandas >=0.17.1
