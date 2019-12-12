@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.22.0" %}
-{% set sha256 = "592e839bce506dd5f106099d74038b25b39b89c569aecf57e4ff5d4416ee1b66" %}
+{% set version = "1.23.0" %}
+{% set sha256 = "ca0c550e1d56d16c0394e893d59cd26a7f1eb70eadc559b74f9c20e5f3fe6988" %}
 {% set dev_url = "https://github.com/googleapis/google-cloud-python/tree/master/bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # Conda package for protobuf does not support Python 2.7 on Windows due to
   # requirement on C++ 11. VS 2008 is not supported.
   skip: true  # [win and vc<14]
@@ -28,7 +28,7 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
-      number: 1
+      number: 0
       noarch: python
 
     requirements:
@@ -39,6 +39,7 @@ outputs:
 
       run:
         - {{ name }}-core {{ version }}
+        - python
         - google-cloud-bigquery-storage >=0.6.0,<0.8.0dev
         - ipython >=5.0.0
         - pandas >=0.17.1
@@ -91,7 +92,7 @@ outputs:
 
   - name: {{ name }}-core
     build:
-      number: 1
+      number: 0
       script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
       skip: True  # [win and vc<14]
 
