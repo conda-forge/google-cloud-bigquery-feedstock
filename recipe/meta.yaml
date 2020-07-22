@@ -1,11 +1,11 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.24.0" %}
-{% set sha256 = "7ffcceed8becea20cb4ce4bdf9b924822780416ff1a9d497f9a1238a3f1442b1" %}
+{% set version = "1.26.0" %}
+{% set sha256 = "6d48d8265a248c1e87a809cebb627fc65fe798572c1d14d85779fe52a31c4fcf" %}
 {% set dev_url = "https://github.com/googleapis/google-cloud-python/tree/master/bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
 package:
-  name: "{{ name|lower }}-split"
+  name: {{ name|lower }}-split
   version: {{ version }}
 
 source:
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # Conda package for protobuf does not support Python 2.7 on Windows due to
   # requirement on C++ 11. VS 2008 is not supported.
   skip: true  # [win and vc<14]
@@ -72,7 +72,7 @@ outputs:
       license: Apache-2.0
       license_family: Apache
       license_file: LICENSE
-      summary: "Batteries-included library for BigQuery API"
+      summary: Batteries-included library for BigQuery API
       description: |
         {{ name }} installs {{ name }}-core and the extra requirements for
         pandas and pyarrow integrations.
@@ -93,8 +93,8 @@ outputs:
   - name: {{ name }}-core
     build:
       number: 0
-      script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
-      skip: True  # [win and vc<14]
+      script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
+      skip: true  # [win and vc<14]
 
     requirements:
       host:
@@ -138,7 +138,7 @@ outputs:
       license: Apache-2.0
       license_family: Apache
       license_file: LICENSE
-      summary: "Core library for BigQuery API"
+      summary: Core library for BigQuery API
       description: |
         {{ name }}-core the core client library for connecting to the BigQuery API.
 
@@ -160,7 +160,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: "BigQuery API client library"
+  summary: BigQuery API client library
   doc_url: {{ doc_url }}
   dev_url: {{ dev_url }}
 
