@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
 {% set version = "1.26.0" %}
 {% set sha256 = "6d48d8265a248c1e87a809cebb627fc65fe798572c1d14d85779fe52a31c4fcf" %}
-{% set dev_url = "https://github.com/googleapis/google-cloud-python/tree/master/bigquery" %}
+{% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
 package:
@@ -40,13 +40,16 @@ outputs:
       run:
         - {{ name }}-core {{ version }}
         - python
-        - google-cloud-bigquery-storage >=0.6.0,<0.8.0dev
-        - ipython >=5.0.0
-        - pandas >=0.17.1
-        - pyarrow >=0.13.0
-        - tqdm >=4.0.0,<=5.0.0dev
+        - google-cloud-bigquery-storage
+        - ipython
+        - pandas
+        - pyarrow
+        - tqdm
 
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google.api_core
         - google.cloud.bigquery
@@ -66,6 +69,8 @@ outputs:
         - google.cloud.bigquery_v2
         - google.cloud.bigquery_v2.gapic.enums
         - google.cloud.bigquery_v2.types
+      commands:
+        - python -m pip check
 
     about:
       home: {{ dev_url }}
@@ -112,8 +117,17 @@ outputs:
         - google-resumable-media >=0.5.0,<0.6.0dev
         - protobuf >=3.6.0
         - six >=1.13.0,<2.0.0dev
+      run-constrained:
+        - google-cloud-bigquery-storage >=0.6.0,<0.8.0dev
+        - ipython >=5.0.0
+        - pandas >=0.17.1
+        - pyarrow >=0.16.0
+        - tqdm >=4.0.0,<=5.0.0dev
 
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google.api_core
         - google.cloud.bigquery
@@ -132,6 +146,8 @@ outputs:
         - google.cloud.bigquery_v2
         - google.cloud.bigquery_v2.gapic.enums
         - google.cloud.bigquery_v2.types
+      commands:
+        - python -m pip check
 
     about:
       home: {{ dev_url }}
