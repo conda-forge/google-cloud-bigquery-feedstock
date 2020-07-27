@@ -1,11 +1,11 @@
 About google-cloud-bigquery-split
 =================================
 
-Home: https://github.com/googleapis/google-cloud-python/tree/master/bigquery
+Home: https://github.com/googleapis/python-bigquery
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Core library for BigQuery API
 
