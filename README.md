@@ -1,7 +1,7 @@
 About google-cloud-bigquery-split
 =================================
 
-Home: https://github.com/googleapis/google-cloud-python/tree/master/bigquery
+Home: https://github.com/googleapis/python-bigquery
 
 Package license: Apache-2.0
 
