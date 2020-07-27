@@ -117,7 +117,7 @@ outputs:
         - six >=1.13.0,<2.0.0dev
       run-constrained:
         - google-cloud-bigquery-storage-core >=1.0.0,<2.0.0dev
-        - pyarrow >=0.16.0
+        - pyarrow >=0.16.0,<2.0dev
         - ipython >=5.0.0
         - pandas >=0.17.1
         - tqdm >=4.0.0,<=5.0.0dev
