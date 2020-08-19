@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "1.26.1" %}
-{% set sha256 = "51c29b95d460486d9e0210f63e8193691cd08480b69775270e84dd3db87c1bf2" %}
+{% set version = "1.27.2" %}
+{% set sha256 = "8a21cfe5db0c84aca0730197b50ea1649350619849283d0b5e7b506d803a6fa1" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -112,12 +112,13 @@ outputs:
         # Backport of enum for Python < 3.4.
         - enum34  # [py2k]
         - google-api-core >=1.21.0,<2.0.0dev
-        - google-cloud-core >=1.1.0,<2.0.0dev
+        - google-cloud-core >=1.4.1,<2.0.0dev
         - google-resumable-media >=0.5.0,<2.0dev
         - six >=1.13.0,<2.0.0dev
       run-constrained:
         - google-cloud-bigquery-storage-core >=1.0.0,<2.0.0dev
-        - pyarrow >=0.16.0,<2.0dev
+        - grpcio >=1.8.2,<2.0dev
+        - pyarrow >=1.0.0,<2.0dev
         - ipython >=5.0.0
         - pandas >=0.17.1
         - tqdm >=4.0.0,<=5.0.0dev
