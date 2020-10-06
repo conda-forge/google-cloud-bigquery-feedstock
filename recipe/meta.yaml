@@ -67,7 +67,6 @@ outputs:
         - google.cloud.bigquery.schema
         - google.cloud.bigquery.table
         - google.cloud.bigquery_v2
-        - google.cloud.bigquery_v2.gapic.enums
         - google.cloud.bigquery_v2.types
       commands:
         - python -m pip check
