@@ -84,22 +84,22 @@ outputs:
 
         Supported Python Versions
         -------------------------
-        Python >= 3.5
+        Python >= 3.6
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7
+        Python == 2.7, Python == 3.5.
 
-        - Python 2.7 support will be removed on January 1, 2020.
-        - protobuf does not support Visual C++ 2008, windows py27 package not available
+        The last version of this library compatible with Python 2.7 and
+        3.5 is google-cloud-bigquery==1.28.0.
       doc_url: {{ doc_url }}
       dev_url: {{ dev_url }}
 
   - name: {{ name }}-core
     build:
       number: 0
+      noarch: python
       script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
-      skip: true  # [win and vc<14]
 
     requirements:
       host:
@@ -109,19 +109,19 @@ outputs:
 
       run:
         - python
-        # Backport of enum for Python < 3.4.
-        - enum34  # [py2k]
-        - google-api-core >=1.21.0,<2.0.0dev
+        - google-api-core-grpc >=1.22.2,<2.0.0dev
+        - proto-plus >=1.10.0
+        - libcst >=0.2.5
         - google-cloud-core >=1.4.1,<2.0.0dev
-        - google-resumable-media >=0.5.0,<2.0dev
+        - google-resumable-media >=0.6.0,<2.0dev
         - six >=1.13.0,<2.0.0dev
       run-constrained:
-        - google-cloud-bigquery-storage-core >=1.0.0,<2.0.0dev
-        - grpcio >=1.8.2,<2.0dev
+        - google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev
+        - grpcio >=1.32.0,<2.0dev
         - pyarrow >=1.0.0,<2.0dev
         - ipython >=5.0.0
-        - pandas >=0.17.1
-        - tqdm >=4.0.0,<=5.0.0dev
+        - pandas >=0.23.0
+        - tqdm >=4.7.4,<=5.0.0dev
 
     test:
       requires:
@@ -159,14 +159,14 @@ outputs:
 
         Supported Python Versions
         -------------------------
-        Python >= 3.5
+        Python >= 3.6
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7
+        Python == 2.7, Python == 3.5.
 
-        - Python 2.7 support will be removed on January 1, 2020.
-        - protobuf does not support Visual C++ 2008, windows py27 package not available
+        The last version of this library compatible with Python 2.7 and
+        3.5 is google-cloud-bigquery==1.28.0.
       doc_url: {{ doc_url }}
       dev_url: {{ dev_url }}
 
