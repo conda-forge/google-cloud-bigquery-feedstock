@@ -5,9 +5,13 @@ Home: https://github.com/googleapis/python-bigquery
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigquery-feedstock/blob/master/LICENSE.txt)
 
 Summary: Core library for BigQuery API
+
+Development: https://github.com/googleapis/python-bigquery
+
+Documentation: https://googleapis.dev/python/bigquery/latest/index.html
 
 google-cloud-bigquery-core the core client library for connecting to the BigQuery API.
 
