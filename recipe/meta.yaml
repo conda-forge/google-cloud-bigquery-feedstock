@@ -116,6 +116,8 @@ outputs:
       run:
         - python
         - google-api-core-grpc >=1.22.2,<2.0.0dev
+        # Workaround for https://github.com/conda-forge/aiohttp-feedstock/issues/43
+        - yarl<1.6.0,>=1.0
         - proto-plus >=1.10.0
         - google-cloud-core >=1.4.1,<2.0.0dev
         - google-resumable-media >=0.6.0,<2.0dev
