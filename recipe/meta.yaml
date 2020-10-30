@@ -1,8 +1,14 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "7369e2f81ccddfa62f2af4009dbddf7a1daaef0fc701a4097e8de5508235af74" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "94bcdce4bcf67974445e2c46224dcdab211d91c1dab720fb1dd68884a720a5f1" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
+{% set dependency_bigquery_storage = "google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev" %}
+{% set dependency_grpcio = "grpcio >=1.32.0,<2.0dev" %}
+{% set dependency_pyarrow = "pyarrow >=1.0.0,<2.0dev" %}
+{% set dependency_ipython = "ipython >=5.0.0" %}
+{% set dependency_pandas = "pandas >=0.23.0" %}
+{% set dependency_tqdm = "tqdm >=4.7.4,<=5.0.0dev" %}
 
 package:
   name: {{ name|lower }}-split
@@ -40,11 +46,12 @@ outputs:
       run:
         - {{ name }}-core {{ version }}
         - python
-        - google-cloud-bigquery-storage
-        - ipython
-        - pandas
-        - pyarrow
-        - tqdm
+        - {{ dependency_bigquery_storage }}
+        - {{ dependency_grpcio }}
+        - {{ dependency_pyarrow }}
+        - {{ dependency_ipython }}
+        - {{ dependency_pandas }}
+        - {{ dependency_tqdm }}
 
     test:
       requires:
@@ -109,17 +116,20 @@ outputs:
       run:
         - python
         - google-api-core-grpc >=1.22.2,<2.0.0dev
+        # Workaround for https://github.com/conda-forge/aiohttp-feedstock/issues/43
+        - yarl<1.6.0,>=1.0
         - proto-plus >=1.10.0
         - google-cloud-core >=1.4.1,<2.0.0dev
         - google-resumable-media >=0.6.0,<2.0dev
         - six >=1.13.0,<2.0.0dev
+        - protobuf >=3.12.0
       run-constrained:
-        - google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev
-        - grpcio >=1.32.0,<2.0dev
-        - pyarrow >=1.0.0,<2.0dev
-        - ipython >=5.0.0
-        - pandas >=0.23.0
-        - tqdm >=4.7.4,<=5.0.0dev
+        - {{ dependency_bigquery_storage }}
+        - {{ dependency_grpcio }}
+        - {{ dependency_pyarrow }}
+        - {{ dependency_ipython }}
+        - {{ dependency_pandas }}
+        - {{ dependency_tqdm }}
 
     test:
       requires:
