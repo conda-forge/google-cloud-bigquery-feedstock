@@ -1,6 +1,12 @@
+{% set dependency_bigquery_storage = "google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev" %}
+{% set dependency_grpcio = "grpcio >=1.32.0,<2.0dev" %}
+{% set dependency_ipython = "ipython >=5.0.0" %}
+{% set dependency_pandas = "pandas >=0.23.0" %}
+{% set dependency_pyarrow = "pyarrow >=1.0.0,<4.0dev" %}
+{% set dependency_tqdm = "tqdm >=4.7.4,<=5.0.0dev" %}
 {% set name = "google-cloud-bigquery" %}
-{% set version = "2.9.0" %}
-{% set sha256 = "33fcbdf5567bdb7657fb3485f061e7f1b45361f65fdafc168ab9172117fd9a5a" %}
+{% set version = "2.10.0" %}
+{% set sha256 = "fac9adb1394d948e259fba1df4e86a6c34cfccaf19af7bdbdf9640cf6e313a71" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 {% set dependency_bigquery_storage = "google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev" %}
