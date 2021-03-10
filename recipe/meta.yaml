@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "2.9.0" %}
-{% set sha256 = "33fcbdf5567bdb7657fb3485f061e7f1b45361f65fdafc168ab9172117fd9a5a" %}
+{% set version = "2.11.0" %}
+{% set sha256 = "d8f8464188e3eb03925a4f4acbf4e8fbfbde84a06145bd8a52c6b736113713ae" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 {% set dependency_bigquery_storage = "google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev" %}
@@ -119,6 +119,7 @@ outputs:
         - proto-plus >=1.10.0
         - google-cloud-core >=1.4.1,<2.0.0dev
         - google-resumable-media >=0.6.0,<2.0dev
+        - packaging >=14.3
         - protobuf >=3.12.0
       run-constrained:
         - {{ dependency_bigquery_storage }}
