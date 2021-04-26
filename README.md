@@ -55,6 +55,7 @@ Installing `google-cloud-bigquery-split` from the `conda-forge` channel can be a
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `google-cloud-bigquery, google-cloud-bigquery-core` can be installed with:
