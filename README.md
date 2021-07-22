@@ -19,10 +19,6 @@ Supported Python Versions
 -------------------------
 Python >= 3.6
 
-Deprecated Python Versions
---------------------------
-Python == 2.7, Python == 3.5.
-
 The last version of this library compatible with Python 2.7 and
 3.5 is google-cloud-bigquery==1.28.0.
 
