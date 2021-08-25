@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "2.24.1" %}
-{% set sha256 = "8111d23e2af87a96c0646a82a83f62d694b6c8829e7881eb4e437b754471649f" %}
+{% set version = "2.25.0" %}
+{% set sha256 = "ea6ff7ede03f3a36f809d800aa5b3d0f733f3cdfe34493deef9f3f7da9aeedbd" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -45,6 +45,8 @@ outputs:
         - pandas >=0.23.0
         - tqdm >=4.7.4,<=5.0.0dev
         - ipython >=5.0.0
+        - geopandas >=0.9.0,<1.0dev
+        - Shapely >=1.6.0,<2.0dev
 
     test:
       requires:
