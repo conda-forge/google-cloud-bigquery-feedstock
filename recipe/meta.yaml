@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "2.28.0" %}
-{% set sha256 = "8b7958c5aa2a432fbdb6beaef0a7c598892b74c12e029bd43fe97d668eb798e6" %}
+{% set version = "2.29.0" %}
+{% set sha256 = "aab082a2e741cc976b729192ec299d348f045320cee9b2d09fd6a18376087cb7" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -41,7 +41,7 @@ outputs:
         - {{ name }}-core {{ version }}
         - python
         - google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev
-        - pyarrow >=3.0.0,<6.0dev
+        - pyarrow >=3.0.0,<7.0dev
         - pandas >=0.23.0
         - tqdm >=4.7.4,<=5.0.0dev
         - ipython >=5.0.0
@@ -113,6 +113,7 @@ outputs:
         - google-resumable-media >=0.6.0,<3.0dev
         - packaging >=14.3
         - protobuf >=3.12.0
+        - python-dateutil >=2.7.2,<3.0dev
         - requests >=2.18.0,<3.0.0dev
 
     test:
