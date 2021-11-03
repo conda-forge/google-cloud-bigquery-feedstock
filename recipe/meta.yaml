@@ -42,7 +42,7 @@ outputs:
         - python
         - google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev
         - pyarrow >=3.0.0,<7.0dev
-        - pandas >=0.23.0
+        - pandas >=0.24.2
         - tqdm >=4.7.4,<=5.0.0dev
         - ipython >=5.0.0
         - geopandas >=0.9.0,<1.0dev
