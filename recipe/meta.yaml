@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Conda package for protobuf does not support Python 2.7 on Windows due to
   # requirement on C++ 11. VS 2008 is not supported.
   skip: true  # [win and vc<14]
@@ -28,7 +28,7 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
-      number: 0
+      number: 1
       noarch: python
 
     requirements:
@@ -94,7 +94,7 @@ outputs:
 
   - name: {{ name }}-core
     build:
-      number: 0
+      number: 1
       noarch: python
       script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
 
