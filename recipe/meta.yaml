@@ -1,5 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
 {% set version = "3.1.0" %}
+{% set build_number = "0" %}
 {% set sha256 = "d2d6caf78d1c133e7ffd9b0b7e2d7df1f9b2f703de377497b96d9a74cfe8ec02" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
@@ -14,42 +15,39 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  # Conda package for protobuf does not support Python 2.7 on Windows due to
-  # requirement on C++ 11. VS 2008 is not supported.
-  skip: true  # [win and vc<14]
+  number: {{ build_number }}
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip >=18.1
     - setuptools >=34.0.0
 
 outputs:
   - name: {{ name }}
     build:
-      number: 0
+      number: {{ build_number }}
       noarch: python
 
     requirements:
       host:
-        - python
+        - python >=3.6
         - pip >=18.1
         - setuptools >=34.0.0
 
       run:
-        - {{ name }}-core {{ version }}
-        - python
+        - {{ pin_subpackage('google-cloud-bigquery-core', max_pin='x.x.x.x.x.x') }}
+        - python >=3.6
         - pandas >=1.0.0
         - db-dtypes >=0.3.0,<2.0.0dev
         - geopandas >=0.9.0,<1.0dev
-        - Shapely >=1.6.0,<2.0dev
+        - shapely >=1.6.0,<2.0dev
         - ipython >=7.0.1,!=8.1.0
         - tqdm >=4.7.4,<=5.0.0dev
 
     test:
       requires:
-        - python
         - pip
       imports:
         - google.api_core
@@ -93,9 +91,9 @@ outputs:
 
   - name: {{ name }}-core
     build:
-      number: 0
+      number: {{ build_number }}
       noarch: python
-      script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
+      script: {{ PYTHON }} -m pip install . -vv
 
     requirements:
       host:
@@ -114,12 +112,11 @@ outputs:
         - packaging >=14.3
         - protobuf >=3.12.0
         - python-dateutil >=2.7.2,<3.0dev
-        - pyarrow >=3.0.0,<8.0dev
+        - pyarrow >=3.0.0,<9.0dev
         - requests >=2.18.0,<3.0.0dev
 
     test:
       requires:
-        - python
         - pip
       imports:
         - google.api_core
