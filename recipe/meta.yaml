@@ -1,6 +1,6 @@
 {% set name = "google-cloud-bigquery" %}
 {% set version = "3.1.0" %}
-{% set build_number = "0" %}
+{% set build = "0" %}
 {% set sha256 = "d2d6caf78d1c133e7ffd9b0b7e2d7df1f9b2f703de377497b96d9a74cfe8ec02" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
@@ -15,27 +15,24 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: {{ build_number }}
+  number: {{ build }}
   noarch: python
 
 requirements:
   host:
     - python >=3.6
-    - pip >=18.1
-    - setuptools >=34.0.0
+    - pip
+  run:
+    - python >=3.6
 
 outputs:
   - name: {{ name }}
     build:
-      number: {{ build_number }}
       noarch: python
-
     requirements:
       host:
         - python >=3.6
-        - pip >=18.1
-        - setuptools >=34.0.0
-
+        - pip
       run:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         - python >=3.6
@@ -68,39 +65,17 @@ outputs:
         - google.cloud.bigquery_v2
         - google.cloud.bigquery_v2.types
       commands:
-        - python -m pip check
-
-    about:
-      home: {{ dev_url }}
-      license: Apache-2.0
-      license_family: Apache
-      license_file: LICENSE
-      summary: Batteries-included library for BigQuery API
-      description: |
-        {{ name }} installs {{ name }}-core and the extra requirements for
-        pandas and pyarrow integrations.
-
-        Supported Python Versions
-        -------------------------
-        Python >= 3.6
-
-        The last version of this library compatible with Python 2.7 and
-        3.5 is google-cloud-bigquery==1.28.0.
-      doc_url: {{ doc_url }}
-      dev_url: {{ dev_url }}
+        - pip check
 
   - name: {{ name }}-core
     build:
-      number: {{ build_number }}
       noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
+      script: {{ PYTHON }} -m pip install . -vv --no-deps
 
     requirements:
       host:
         - python >=3.6
-        - pip >=18.1
-        - setuptools >=34.0.0
-
+        - pip
       run:
         - python >=3.6
         - grpcio >=1.38.1,<2.0dev
@@ -136,25 +111,7 @@ outputs:
         - google.cloud.bigquery_v2
         - google.cloud.bigquery_v2.types
       commands:
-        - python -m pip check
-
-    about:
-      home: {{ dev_url }}
-      license: Apache-2.0
-      license_family: Apache
-      license_file: LICENSE
-      summary: Core library for BigQuery API
-      description: |
-        {{ name }}-core the core client library for connecting to the BigQuery API.
-
-        Supported Python Versions
-        -------------------------
-        Python >= 3.6
-
-        The last version of this library compatible with Python 2.7 and
-        3.5 is google-cloud-bigquery==1.28.0.
-      doc_url: {{ doc_url }}
-      dev_url: {{ dev_url }}
+        - pip check
 
 about:
   home: {{ dev_url }}
