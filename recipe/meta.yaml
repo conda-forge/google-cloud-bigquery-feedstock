@@ -37,7 +37,7 @@ outputs:
         - setuptools >=34.0.0
 
       run:
-        - {{ pin_subpackage('google-cloud-bigquery-core', max_pin='x.x.x.x.x.x') }}
+        - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         - python >=3.6
         - pandas >=1.0.0
         - db-dtypes >=0.3.0,<2.0.0dev
