@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "3.3.3" %}
+{% set version = "3.3.5" %}
 {% set build = 0 %}
-{% set sha256 = "afbb59c816fcb7d4facba1033c639f4c2d49ef148bfeaff42f5de0cf4e506bf9" %}
+{% set sha256 = "fbb65799c02754ddcaed981f4a8b6b021b69cc00d4cd9c35ca1d6cc272ead9d1" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7,<3.11
     - pip
   run:
-    - python >=3.6
+    - python >=3.7,<3.11
 
 outputs:
   - name: {{ name }}
@@ -31,16 +31,20 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.7
+        - python >=3.7,<3.11
         - pip
       run:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
-        - python >=3.7
+        - python >=3.7,<3.11
+        # pandas extra
         - pandas >=1.0.0
         - db-dtypes >=0.3.0,<2.0.0dev
+        # geopandas extra
         - geopandas >=0.9.0,<1.0dev
         - shapely >=1.6.0,<2.0dev
+        # ipython extra
         - ipython >=7.0.1,!=8.1.0
+        # tqdm extra
         - tqdm >=4.7.4,<=5.0.0dev
 
     test:
@@ -74,10 +78,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.7
+        - python >=3.7,<3.11
         - pip
       run:
-        - python >=3.7
+        - python >=3.7,<3.11
         - grpcio >=1.47.0,<2.0dev
         - google-api-core-grpc >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
         - google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev
@@ -85,9 +89,9 @@ outputs:
         - google-cloud-core >=1.4.1,<3.0.0dev
         - google-resumable-media >=0.6.0,<3.0dev
         - packaging >=14.3,<22.0.0dev
-        - protobuf >=3.19.0,<4.0.0dev
+        - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
         - python-dateutil >=2.7.2,<3.0dev
-        - pyarrow >=3.0.0,<9.0dev
+        - pyarrow >=3.0.0,<10.0dev
         - requests >=2.18.0,<3.0.0dev
 
     test:
