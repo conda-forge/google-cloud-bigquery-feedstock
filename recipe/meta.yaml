@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "3.3.5" %}
+{% set version = "3.3.6" %}
 {% set build = 0 %}
-{% set sha256 = "fbb65799c02754ddcaed981f4a8b6b021b69cc00d4cd9c35ca1d6cc272ead9d1" %}
+{% set sha256 = "78df088821643eef2f401357321570e3c5b060864ae5b95f053f0296c00399eb" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -39,6 +39,8 @@ outputs:
         # pandas extra
         - pandas >=1.0.0
         - db-dtypes >=0.3.0,<2.0.0dev
+        # ipywidgets extra
+        - ipywidgets 7.7.1
         # geopandas extra
         - geopandas >=0.9.0,<1.0dev
         - shapely >=1.6.0,<2.0dev
@@ -91,8 +93,8 @@ outputs:
         - packaging >=14.3,<22.0.0dev
         - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
         - python-dateutil >=2.7.2,<3.0dev
-        - pyarrow >=3.0.0,<10.0dev
-        - requests >=2.18.0,<3.0.0dev
+        - pyarrow >=3.0.0,<11.0dev
+        - requests >=2.21.0,<3.0.0dev
 
     test:
       requires:
