@@ -39,6 +39,8 @@ outputs:
         # pandas extra
         - pandas >=1.0.0
         - db-dtypes >=0.3.0,<2.0.0dev
+        # ipywidgets extra
+        - ipywidgets 7.7.1
         # geopandas extra
         - geopandas >=0.9.0,<1.0dev
         - shapely >=1.6.0,<2.0dev
