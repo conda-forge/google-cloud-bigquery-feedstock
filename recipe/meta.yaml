@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "3.3.6" %}
+{% set version = "3.4.0" %}
 {% set build = 0 %}
-{% set sha256 = "78df088821643eef2f401357321570e3c5b060864ae5b95f053f0296c00399eb" %}
+{% set sha256 = "054f97aa664a43549a152a6bd1ec059733d3f23b828e945a141ece4cdb7a0991" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7,<3.11
+    - python >=3.7
     - pip
   run:
-    - python >=3.7,<3.11
+    - python >=3.7
 
 outputs:
   - name: {{ name }}
@@ -31,11 +31,11 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.7,<3.11
+        - python >=3.7
         - pip
       run:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
-        - python >=3.7,<3.11
+        - python >=3.7
         # pandas extra
         - pandas >=1.0.0
         - db-dtypes >=0.3.0,<2.0.0dev
@@ -80,10 +80,10 @@ outputs:
 
     requirements:
       host:
-        - python >=3.7,<3.11
+        - python >=3.7
         - pip
       run:
-        - python >=3.7,<3.11
+        - python >=3.7
         - grpcio >=1.47.0,<2.0dev
         - google-api-core-grpc >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
         - google-cloud-bigquery-storage-core >=2.0.0,<3.0.0dev
