@@ -37,7 +37,7 @@ outputs:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         - python >=3.7
         # bqstorage and pandas extras 
-        - pyarrow >= 3.0.0
+        - pyarrow >=3.0.0
         # bqstorage extra
         - google-cloud-bigquery-storage >=2.0.0,<3.0.0dev
         - grpcio >=1.47.0,< 2.0dev
