@@ -90,11 +90,14 @@ outputs:
       run:
         - python >=3.7
         - grpcio >=1.47.0,<2.0dev
+        # the following is not needed here because grpcio <1.49.1 was not built
+        # with python 3.11 and we want to stay noarch: python
+        # grpcio >=1.49.1,<2.0dev  # [py>=311]
         - google-api-core-grpc >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
         - proto-plus >=1.15.0,<2.0.0dev
         - google-cloud-core >=1.4.1,<3.0.0dev
         - google-resumable-media >=0.6.0,<3.0dev
-        - packaging >=14.3,<22.0.0dev
+        - packaging >=20.0.0
         - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
         - python-dateutil >=2.7.2,<3.0dev
         - requests >=2.21.0,<3.0.0dev
