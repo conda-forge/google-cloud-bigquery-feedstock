@@ -53,7 +53,7 @@ outputs:
         - shapely >=1.8.4,<2.0dev
         # ipython extra
         - ipython >=7.23.1,!=8.1.0
-        - ipykernel>=6.0.0
+        - ipykernel >=6.0.0
         # tqdm extra
         - tqdm >=4.7.4,<=5.0.0dev
 
