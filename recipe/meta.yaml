@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "3.9.0" %}
+{% set version = "3.10.0" %}
 {% set build = 0 %}
-{% set sha256 = "39b055087a8471b0ebab7a4bf54decda845b6087b104ef0be078ced1e1dccb26" %}
+{% set sha256 = "4b02def076e2db8cec66f65fb627d13904a9fc3cf4fee315ede43dcb7038a8df" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -39,7 +39,7 @@ outputs:
         # bqstorage and pandas extras 
         - pyarrow >=3.0.0
         # bqstorage extra
-        - google-cloud-bigquery-storage >=2.0.0,<3.0.0dev
+        - google-cloud-bigquery-storage >=2.6.0,<3.0.0dev
         # going with the more restrictive constraint here so we can stay noarch
         - grpcio >=1.49.1,< 2.0dev
         # pandas extra
