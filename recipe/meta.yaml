@@ -39,7 +39,7 @@ outputs:
         # bqstorage and pandas extras 
         - pyarrow >=3.0.0
         # bqstorage extra
-        - google-cloud-bigquery-storage >=2.0.0,<3.0.0dev
+        - google-cloud-bigquery-storage >=2.6.0,<3.0.0dev
         # going with the more restrictive constraint here so we can stay noarch
         - grpcio >=1.49.1,< 2.0dev
         # pandas extra
