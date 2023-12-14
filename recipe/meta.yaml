@@ -121,8 +121,6 @@ outputs:
         - google.cloud.bigquery.routine
         - google.cloud.bigquery.schema
         - google.cloud.bigquery.table
-        - google.cloud.bigquery_v2
-        - google.cloud.bigquery_v2.types
       commands:
         - pip check
 
