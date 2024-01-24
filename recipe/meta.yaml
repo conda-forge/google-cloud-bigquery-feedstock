@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "3.16.0" %}
+{% set version = "3.17.0" %}
 {% set build = 0 %}
-{% set sha256 = "1d6abf4b1d740df17cb43a078789872af8059a0b1dd999f32ea69ebc6f7ba7ef" %}
+{% set sha256 = "c5617295fc3dec730d16cc5385ab944b123b31d62fa409bd055a4bf3edf83f49" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
