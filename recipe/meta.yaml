@@ -31,6 +31,10 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python >=3.8
+        - pip
+        - setuptools
       run:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         # restricting to python >=3.8 to avoid dependency on importlib_metadata for python <3.8
