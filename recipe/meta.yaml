@@ -37,7 +37,6 @@ outputs:
         - setuptools
       run:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
-        # restricting to python >=3.8 to avoid dependency on importlib_metadata for python <3.8
         - python >={{ python_min }}
         # bqstorage and pandas extras
         - pyarrow >=3.0.0
