@@ -1,7 +1,7 @@
 {% set name = "google-cloud-bigquery" %}
-{% set version = "3.29.0" %}
+{% set version = "3.30.0" %}
 {% set build = 0 %}
-{% set sha256 = "fafc2b455ffce3bcc6ce0e884184ef50b6a11350a83b91e327fadda4d5566e72" %}
+{% set sha256 = "7e27fbafc8ed33cc200fe05af12ecd74d279fe3da6692585a3cef7aee90575b6" %}
 {% set dev_url = "https://github.com/googleapis/python-bigquery" %}
 {% set doc_url = "https://googleapis.dev/python/bigquery/latest/index.html" %}
 
@@ -46,6 +46,9 @@ outputs:
         - grpcio >=1.49.1,< 2.0dev
         # pandas extra
         - pandas >=1.1.0
+        - pandas-gbq >=0.26.1
+        # use more restrictive for python >=3.11
+        - grpcio >=1.49.1,< 2.0dev
         - db-dtypes >=0.3.0,<2.0.0dev
         # ipywidgets extra
         - ipywidgets >=7.7.0
