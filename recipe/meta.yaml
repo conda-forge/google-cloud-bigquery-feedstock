@@ -46,6 +46,9 @@ outputs:
         - grpcio >=1.49.1,< 2.0dev
         # pandas extra
         - pandas >=1.1.0
+        - pandas-gbq >=0.26.1
+        # use more restrictive for python >=3.11
+        - grpcio >=1.49.1,< 2.0dev
         - db-dtypes >=0.3.0,<2.0.0dev
         # ipywidgets extra
         - ipywidgets >=7.7.0
