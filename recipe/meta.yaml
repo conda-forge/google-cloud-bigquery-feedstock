@@ -39,32 +39,32 @@ outputs:
         - {{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         - python >={{ python_min }}
         # bqstorage and pandas extras
-        - pyarrow >=3.0.0
+        - pyarrow >=4.0.0
         # bqstorage extra
-        - google-cloud-bigquery-storage >=2.6.0,<3.0.0dev
+        - google-cloud-bigquery-storage >=2.6.0,<3.0.0
         # going with the more restrictive (py >= 3.11) constraint here so we can stay noarch
-        - grpcio >=1.49.1,<2.0dev
+        - grpcio >=1.49.1,<2.0.0
         # pandas extra
         - pandas >=1.1.0
         - pandas-gbq >=0.26.1
-        - db-dtypes >=0.3.0,<2.0.0dev
+        - db-dtypes >=0.3.0,<2.0.0
         # ipywidgets extra
         - ipywidgets >=7.7.0
         - ipykernel >=6.0.0
         # geopandas extra
-        - geopandas >=0.9.0,<2.0dev
-        - shapely >=1.8.4,<3.0.0dev
+        - geopandas >=0.9.0,<2.0.0
+        - shapely >=1.8.4,<3.0.0
         # ipython extra
         - bigquery-magics >=0.1.0
         # tqdm extra
-        - tqdm >=4.7.4,<=5.0.0dev
+        - tqdm >=4.7.4,<=5.0.0
         # opentelemetry extra
         - opentelemetry-api >=1.1.0
         - opentelemetry-sdk >=1.1.0
         - opentelemetry-instrumentation >=0.20b0
         # bigquery_v2 extra
-        - proto-plus >=1.22.3,<2.0.0dev
-        - protobuf >=3.20.2,<6.0.0dev,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+        - proto-plus >=1.22.3,<2.0.0
+        - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 
     test:
       requires:
@@ -103,13 +103,13 @@ outputs:
         - setuptools
       run:
         - python >={{ python_min }}
-        - google-api-core-grpc >=2.11.1,<3.0.0dev
-        - google-auth >=2.14.1,<3.0.0dev
-        - google-cloud-core >=2.4.1,<3.0.0dev
-        - google-resumable-media >=2.0.0,<3.0dev
+        - google-api-core-grpc >=2.11.1,<3.0.0
+        - google-auth >=2.14.1,<3.0.0
+        - google-cloud-core >=2.4.1,<3.0.0
+        - google-resumable-media >=2.0.0,<3.0.0
         - packaging >=20.0.0
-        - python-dateutil >=2.7.3,<3.0dev
-        - requests >=2.21.0,<3.0.0dev
+        - python-dateutil >=2.7.3,<3.0.0
+        - requests >=2.21.0,<3.0.0
 
     test:
       requires:
