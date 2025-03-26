@@ -43,7 +43,7 @@ outputs:
         # bqstorage extra
         - google-cloud-bigquery-storage >=2.6.0,<3.0.0dev
         # going with the more restrictive (py >= 3.11) constraint here so we can stay noarch
-        - grpcio >=1.49.1,< 2.0dev
+        - grpcio >=1.49.1,<2.0dev
         # pandas extra
         - pandas >=1.1.0
         - pandas-gbq >=0.26.1
