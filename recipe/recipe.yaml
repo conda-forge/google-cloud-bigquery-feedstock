@@ -1,14 +1,12 @@
 context:
   name: google-cloud-bigquery
   version: 3.40.1
-  dev_url: https://github.com/googleapis/python-bigquery
 
 recipe:
   name: ${{ name|lower }}-split
   version: ${{ version }}
 
 source:
-  file_name: ${{ name }}-${{ version }}.tar.gz
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
   sha256: 75afcfb6e007238fe1deefb2182105249321145ff921784fe7b1de2b4ba24506
 
@@ -124,12 +122,12 @@ outputs:
           python_version: ${{ python_min }}.*
 
 about:
-  homepage: ${{ dev_url }}
+  homepage: https://github.com/googleapis/python-bigquery
   license: Apache-2.0
   license_file: LICENSE
   summary: BigQuery API client library
   documentation: https://googleapis.dev/python/bigquery/latest/index.html
-  repository: ${{ dev_url }}
+  repository: https://github.com/googleapis/python-bigquery
 
 extra:
   recipe-maintainers:
