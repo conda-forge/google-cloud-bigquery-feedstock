@@ -1,5 +1,5 @@
-About google-cloud-bigquery-split-feedstock
-===========================================
+About google-cloud-bigquery-feedstock
+=====================================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigquery-feedstock/blob/main/LICENSE.txt)
 
@@ -34,10 +34,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-google--cloud--bigquery--core-green.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-cloud-bigquery-core.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-cloud-bigquery-core.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-cloud-bigquery-core.svg)](https://anaconda.org/conda-forge/google-cloud-bigquery-core) |
 
-Installing google-cloud-bigquery-split
-======================================
+Installing google-cloud-bigquery
+================================
 
-Installing `google-cloud-bigquery-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `google-cloud-bigquery` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -123,17 +123,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating google-cloud-bigquery-split-feedstock
-==============================================
+Updating google-cloud-bigquery-feedstock
+========================================
 
-If you would like to improve the google-cloud-bigquery-split recipe or build a new
+If you would like to improve the google-cloud-bigquery recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/google-cloud-bigquery-split-feedstock are
+Note that all branches in the conda-forge/google-cloud-bigquery-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
