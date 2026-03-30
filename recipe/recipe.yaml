@@ -1,6 +1,6 @@
 context:
   name: google-cloud-bigquery
-  version: 3.40.1
+  version: "3.41.0"
 
 recipe:
   name: ${{ name|lower }}-split
@@ -8,10 +8,10 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 75afcfb6e007238fe1deefb2182105249321145ff921784fe7b1de2b4ba24506
+  sha256: 2217e488b47ed576360c9b2cc07d59d883a54b83167c0ef37f915c26b01a06fe
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - package:
