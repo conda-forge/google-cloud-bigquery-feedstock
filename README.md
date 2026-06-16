@@ -3,13 +3,13 @@ About google-cloud-bigquery-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigquery-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/python-bigquery
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery
 
 Package license: Apache-2.0
 
 Summary: BigQuery API client library
 
-Development: https://github.com/googleapis/python-bigquery
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery
 
 Documentation: https://googleapis.dev/python/bigquery/latest/index.html
 
@@ -20,7 +20,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/google-cloud-bigquery-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/google-cloud-bigquery-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
