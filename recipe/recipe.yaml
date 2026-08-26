@@ -26,11 +26,11 @@ outputs:
         - pip
         - setuptools
       run:
-        - ${{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         - python >=${{ python_min }}
+        - ${{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         # from the bqstorage extra
         - google-cloud-bigquery-storage >=2.29.0,<3.0.0
-        # more restrictive constraint for python >=3.14
+        # tightest of upstream's floors (python >=3.14)
         - grpcio >=1.75.1,<2.0.0
         - pyarrow >=4.0.0
         # from the pandas extra
@@ -54,7 +54,7 @@ outputs:
         - opentelemetry-api >=1.1.0
         - opentelemetry-sdk >=1.1.0
         - opentelemetry-instrumentation >=0.20b0
-        # from the bigquery_v2 extra
+        # from the bigquery-v2 extra
         - proto-plus >=1.26.1,<2.0.0
         - protobuf >=6.33.5,<8.0.0
     tests:
