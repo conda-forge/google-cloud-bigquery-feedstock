@@ -5,7 +5,7 @@
 
 [workspace]
 name = "google-cloud-bigquery-feedstock"
-version = "2026.9.1"  # conda-smithy version used to generate this file
+version = "2026.9.23"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/google-cloud-bigquery-feedstock"
 authors = ["@conda-forge/google-cloud-bigquery"]
 channels = ["conda-forge"]
