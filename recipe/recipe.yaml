@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-bigquery
-  version: "3.46.0"
+  version: "3.46.1"
 
 recipe:
   name: ${{ name|lower }}-split
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 6d4a43238aa7207bc9798270b3303a703c5c451c856aae14ed04a6b2e7ce4654
+  sha256: c5564a58fc3c99b003cd334a8f302c6224bd34cb55c87476a3c445be1d00538b
 
 build:
   number: 0
