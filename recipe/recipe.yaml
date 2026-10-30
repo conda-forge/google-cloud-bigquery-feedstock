@@ -29,7 +29,7 @@ outputs:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('google-cloud-bigquery-core', exact=True) }}
         # from the bqstorage extra
-        - google-cloud-bigquery-storage >=2.29.0,<3.0.0
+        - google-cloud-bigquery-storage >=2.43.0,<3.0.0
         # tightest of upstream's floors (python >=3.14)
         - grpcio >=1.75.1,<2.0.0
         - pyarrow >=4.0.0
